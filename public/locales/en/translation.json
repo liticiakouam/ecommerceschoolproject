@@ -1,0 +1,36 @@
+{ 
+    "login":{
+    "h1":"Sign in to GreadMarket",
+    "label1":"Email address",
+    "placeholder1":"Enter your Email Adress",
+    "label2":"password",
+    "placeholder2":"Enter your Password",
+    "button1":"Connection",
+    "p1":"Hi, Welcome Back",
+    "errLogin":"Bad authentication",
+    "errConnection":"A problem is remembered check your internal connection",
+    "requiredMotpasse":"le nom d'utilisateur est obligatoire",
+    "requiredNomutilisateur":"le Mot de passe est obligatoire"
+
+    },
+  
+   "Home":{
+    "paragraphe1":"Bienvennue"
+    },
+
+   "enregistrerUser":{
+    "titre" :"Account creation", 
+    "t1":"Names",
+    "l1":"Last Name",
+    "l2":"Surname",       
+    "l3":"Telephone number",
+    "l4":"E-mail address",
+    "l5":"Password",
+    "l6":"Confirmation de Mot de Passe",
+    "butv":"Account creation",
+    "butr":"Reset",
+    "ErOb":"This field is required",
+    "ErNumero":"Cannot Contain Numeric Values ​​Only"
+    }
+
+}

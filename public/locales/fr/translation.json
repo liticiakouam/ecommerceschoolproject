@@ -1,0 +1,36 @@
+{
+    
+    "login":{
+        "h1":"Connectez-vous à GreadMarket",
+        "label1":"Adresse Email",
+        "placeholder1":"Entrez Votre  Adresse Email",
+        "label2":"Mot de passe",
+        "placeholder2":"Entrez Votre Mot de passe",
+        "button1":"Connexion",
+        "p1":"Salut, bienvenue à nouveau",
+        "errLogin":"Mauvaise authentification",
+        "errConnection":"Un probleme est souvennue verifier votre connexion interne"
+    },
+    "Home":{
+        "paragraphe1":"Bienvennue"
+    },
+
+    "enregistrerUser":{
+         "titre" :"Creation de compte" ,
+         "t1":"Noms",
+         "l1":"Prenom", 
+         "l2":"Nom De Famille",
+         "l3":"Numero Telephone",
+         "l4":"Adresse Email",
+         "l5":"Mot de passe",
+         "l6":"Confirmation de Mot de Passe",
+         "butv":"Creer Mon Compte",
+         "butr":"Annuler",
+         "ErOb":"Ce Champ est obligatoire",
+         "ErNumero":"ne peu Contenir Uniquement les valeurs Numeriques"
+
+
+          
+    }
+
+}
