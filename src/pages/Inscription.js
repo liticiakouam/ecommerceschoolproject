@@ -6,6 +6,7 @@ import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useForm, } from "react-hook-form";
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 // @mui
 import {useTranslation } from 'react-i18next';
 import {  Typography, Divider, Stack, Button } from '@mui/material';
@@ -25,7 +26,7 @@ const Swal = require('sweetalert2');
 
 function Inscription() {
   const mdUp = useResponsive('up', 'md');
-  
+  const navigate = useNavigate();
   const {t,i18n}=useTranslation();
 
   const schema = yup.object().shape({
@@ -42,26 +43,36 @@ function Inscription() {
     resolver: yupResolver(schema),
   });
 
+  // "firstname": data.Prenom,
+  // "lastname": data.Nom,
+  // "phoneNumber": data.phoneNumber,
+  // "email": data.Email,
+  // "password": data.password,
   const onSubmitHandler = (data) => {
-         
-        axios.post("/person",{
-          "firstname": data.Prenom,
-          "lastname": data.Nom,
-          "phoneNumber": data.phoneNumber,
-          "email": data.Email,
-          "password": data.password,
-        }).then(function(response){
+        axios.post("http://localhost:8080/person",{
+          firstname: data.Prenom,
+          lastname: data.Nom,
+          phoneNumber: data.Numero,
+          email: data.Email,
+          password: data.Password,
+         role: "USER_CUSTOMER"
+        }
+        
+        
+        ).then(response=>{
             Swal.fire({
               title: 'Enregistrer avec succes',
-              text: data.Nom,
+              text: data.Prenom + data.Nom,
               icon: 'success',
               confirmButtonText: 'OK'
           })
-        }).catch(function (error){
-              console.log(error);
+          navigate('/products', { replace: true });
+
+        }).catch(error=>{
+              console.log(data);
               Swal.fire({
                 title: 'Server Error ',
-                text: data.Nom,
+                text: error,
                 icon: 'error',
                 confirmButtonText: 'OK'
               })
